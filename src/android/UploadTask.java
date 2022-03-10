@@ -334,6 +334,7 @@ public final class UploadTask extends Worker {
 
         // Build body
         final MultipartBody.Builder bodyBuilder = new MultipartBody.Builder();
+        bodyBuilder.setType(MultipartBody.FORM);
 
         // With the parameters
         final int parametersCount = getInputData().getInt(KEY_INPUT_PARAMETERS_COUNT, 0);
